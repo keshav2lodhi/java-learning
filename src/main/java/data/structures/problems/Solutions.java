@@ -1,5 +1,7 @@
 package data.structures.problems;
 
+import java.util.*;
+
 public class Solutions {
     /*********Find the 2nd highest ele form Array*********/
     /*public static void main(String[] args) {
