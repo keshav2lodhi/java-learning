@@ -98,5 +98,4 @@ logs/
 *.iml
 # Exclude maven wrapper
 !/.mvn/wrapper/maven-wrapper.jar
-
 # End of https://www.gitignore.io/api/java,intellij,maven
