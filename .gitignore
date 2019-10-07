@@ -80,6 +80,22 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/project/
+project/target/
+project/plugins/project/
+.history
+.cache
+.lib/
+.idea/
+.DS_Store
+logs/
+.class
+*.iml
 # Exclude maven wrapper
 !/.mvn/wrapper/maven-wrapper.jar
 
