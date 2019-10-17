@@ -149,4 +149,121 @@ public class Solutions {
         System.out.println("The pair is: " + arr[l] + " and " + arr[r]);
     }*/
 
+    /***********Closest pair whose sum is equal to x************/
+    /*public static void main(String[] args) {
+        int arr[] = {10, 22, 28, 29, 30, 40};
+        int sum = 54;
+        int res_l = 0;
+        int res_r = 0;
+        int l = 0;
+        int r = arr.length - 1;
+        int diff = Integer.MAX_VALUE;
+
+        while(l < r){
+            if(Math.abs(arr[l] + arr[r] - sum) < diff){
+                System.out.println("from if " + diff);
+                res_l = l;
+                res_r = r;
+                diff = Math.abs(arr[l] + arr[r] - sum);
+                System.out.println("from end: " + diff);
+            } else if(arr[l] + arr[r] <= sum){
+                System.out.println(arr[l] +", "+ arr[r]);
+                l++;
+            }
+            else
+                r--;
+        }
+        System.out.println("The closest pair is: " + arr[res_l] + " and " + arr[res_r]);
+    }*/
+
+    /**************All permutation of str****************/
+    /*public static void main(String[] args) {
+        String str = "abc";
+        permutation("",str);
+    }
+    public static void permutation(String prefix, String str){
+        int length = str.length();
+        if(length == 0) System.out.println(prefix +"\n");
+        else {
+            for (int i = 0; i < length; i++){
+                String rest = str.substring(0, i) + str.substring(i + 1);
+                System.out.println(prefix + str.charAt(i) +" and "+ rest +" value of i: "+i);
+                permutation(prefix + str.charAt(i), rest);
+            }
+        }
+    }*/
+
+    /*********Print the no whose occurrence is greater than the half size of an array********/
+    /*public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(2,2,2,2,2,3,4,4,4,6);
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < list.size(); i++){
+            if(!map.containsKey(list.get(i))){
+                map.put(list.get(i), 1);
+            } else{
+                map.put(list.get(i),map.get(list.get(i))+1);
+            }
+        }
+        for(Map.Entry<Integer, Integer> m : map.entrySet()){
+            System.out.println("Key: " + m.getKey() +"and value " + m.getValue());
+            if(m.getValue() > list.size()/2){
+                System.out.println(m.getKey());
+                break;
+            }else{
+                System.out.println(-1);
+                break;
+            }
+        }
+    }*/
+
+    /******Find the max no of square roots of number b/w given range******/
+    /*public static void main(String[] args) {
+        Solutions s = new Solutions();
+        int res = s.solution(6000, 7000);
+        System.out.println(res);
+    }
+    public static Boolean validSquare(int i){
+        Double d = Math.sqrt(i);
+        if(d.intValue() == d){
+            return   true;
+        }
+        else
+            return false;
+    }
+    public static int rec(int i, int j){
+
+        Double d = Math.sqrt(i);
+        if(d.intValue() == d){
+            j = j+1;
+            return rec(d.intValue(), j);
+        }
+        else
+            return j;
+
+    }
+    public static int solution(int A, int B){
+        int first = 0;
+        int last = 0;
+        int max = 0;
+
+        for(int i = A; i<= B; i++){
+            if(validSquare(i)){
+                first = (int) Math.sqrt(i);
+                break;
+            }
+        }
+        for(int i = B; i >= A; i--){
+            if(validSquare(i)){
+                last = (int) Math.sqrt(i);
+                break;
+            }
+        }
+        for(int i = first ; i <= last; i++){
+            int sol =  rec(i, 1);
+            if(sol > max){
+                max = sol;
+            }
+        }
+        return max;
+    }*/
 }
