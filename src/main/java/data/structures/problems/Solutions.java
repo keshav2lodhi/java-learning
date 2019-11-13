@@ -266,4 +266,15 @@ public class Solutions {
         }
         return max;
     }*/
+
+    /****** String example with literals and new keyword *****/
+    public static void main(String[] args) {
+        String a = "string";
+        String b = new String("string");
+        //String b = new String("string").intern();
+        String c = a;
+        System.out.println(a == b);
+        System.out.println(a == c);
+        System.out.println(b.equals(c));
+    }
 }
