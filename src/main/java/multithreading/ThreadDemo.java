@@ -151,6 +151,7 @@ public class ThreadDemo {
         t1.join();
         t2.join();
         System.out.println("After join method:--> " + t1.isAlive());
+
         System.out.println("Bye");
     }
 }
