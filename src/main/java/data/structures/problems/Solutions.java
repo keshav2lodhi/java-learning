@@ -1,6 +1,7 @@
 package data.structures.problems;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Solutions {
     /*********Find the 2nd highest ele form Array*********/
@@ -268,7 +269,7 @@ public class Solutions {
     }*/
 
     /****** String example with literals and new keyword *****/
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         String a = "string";
         String b = new String("string");
         //String b = new String("string").intern();
@@ -276,5 +277,274 @@ public class Solutions {
         System.out.println(a == b);
         System.out.println(a == c);
         System.out.println(b.equals(c));
-    }
+    }*/
+
+    /*************Print all substrings*********/
+    /*public static void main(String[] args) {
+        String str = "abbc";
+        for(int i = 0; i < str.length(); i++){
+            for(int j = i + 1; j <= str.length(); j++){
+                System.out.println(str.substring(i, j));
+            }
+        }
+    }*/
+
+    /********Find length w/o using length method*******/
+    /*public static void main(String[] args) {
+        String str = "abc";
+        int len = 0;
+        char[] arr = str.toCharArray();
+        for(char c : arr){
+            len++;
+        }
+        System.out.println(len);
+    }*/
+
+    /*****Find the duplicate char in string OR find the occurrence each char*****/
+    /*public static void main(String[] args) {
+        String str = "java";
+        char[] chararr = str.toCharArray();
+        Map<Character, Integer> map = new HashMap<>();
+
+        for(char ch : chararr){
+            if(!map.containsKey(ch)){
+                map.put(ch, 1);
+            }else{
+                map.put(ch, map.get(ch) + 1);
+            }
+        }
+        for(Map.Entry<Character, Integer> e : map.entrySet()){
+            if(e.getValue() > 1) {
+                System.out.println("Key:-->" + e.getKey() + " and value:--> " + e.getValue());
+            }
+        }
+    }*/
+
+    /************Find String anagrams***********/
+    /*public static void main(String[] args) {
+        String str1 = "Keep";
+        String str2 = "Peek";
+        boolean flag = true;
+
+        if(str1.length() != str2.length()){
+            flag = false;
+        }else {
+            char[] arr1 = str1.toLowerCase().toCharArray();
+            char[] arr2 = str2.toLowerCase().toCharArray();
+
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+            flag = Arrays.equals(arr1,arr2);
+        }
+
+        if(flag){
+            System.out.println("String is anagram");
+        }else {
+            System.out.println("String is not anagram");
+        }
+    }*/
+
+    /*************Count the no of Vowels and consonants************/
+    /*public static void main(String[] args) {
+        String str = "Programming";
+        int vowel = 0;
+        int consonants = 0;
+        char[] charArr = str.toCharArray();
+        for (char c : charArr) {
+            if (Pattern.matches("[aeiou]", Character.toString(c)))
+                vowel++;
+            else {
+                consonants++;
+            }
+        }
+        System.out.println("No of vowels:--> " + vowel+"\nAnd no of consonants:--> "+consonants);
+    }*/
+
+    /**********Remove a specific char from the string***********/
+    /*public static void main(String[] args) {
+        String str = "abc";
+        char[] arr = str.toCharArray();
+        char ch = 'c';
+        StringBuilder sb = new StringBuilder();
+
+        for(char c : arr){
+            if(c != ch){
+               sb.append(c);
+            }
+        }
+        System.out.println(sb.toString());
+    }*/
+
+    /**********Count the frequency of words***********/
+    /*public static void main(String[] args) {
+        String str = "This this is is done by Saket Saket";
+        String []arr = str.split(" ");
+        Map<String, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < arr.length; i++){
+            if(!map.containsKey(arr[i])){
+                map.put(arr[i], 1);
+            } else{
+                map.put(arr[i], map.get(arr[i])+1);
+            }
+        }
+        System.out.println(map);
+    }*/
+
+    /**************Remove white spaces from the string*************/
+    /*public static void main(String[] args) {
+        String str = "Saket Saurav        is a QualityAna    list";
+        System.out.println(str.replaceAll("\\s", ""));
+        //System.out.println(str.replaceAll(" ", ""));
+    }*/
+
+    /**********Check equality of two Array**********/
+    /*public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {1, 2, 3, 4, 5};
+        boolean flag = true;
+
+        //System.out.println(Arrays.equals(arr1, arr2));
+
+        if (arr1.length == arr2.length) {
+            for (int i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    flag = false;
+                }
+            }
+        } else{
+            flag = false;
+        }
+        if(flag){
+            System.out.println("Both are equal");
+        } else{
+            System.out.println("Both are not equal");
+        }
+    }*/
+
+    /**********************Sort binary no in Array*******************/
+    /*public static void main(String[] args) {
+        int []arr = {0,0,1,0,1,1,0};
+        //Arrays.sort(arr);
+        //Arrays.stream(arr).forEach(System.out :: println);
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 0){
+                count ++;
+            }
+        }
+        System.out.println("count: " + count);
+        for(int j = 0; j < arr.length; j++){
+            if(j < count)
+                arr[j] = 0;
+            else
+                arr[j] = 1;
+        }
+        Arrays.stream(arr).forEach(System.out :: print);
+    }*/
+
+    /**********************Sort binary no in Array*******************/
+    /*public static void main(String[] args) {
+        int arr[] = { 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0 };
+        int j = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < 1){
+                j++;
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        Arrays.stream(arr).forEach(System.out :: print);
+    }*/
+
+    /***************Find armstrong number*****************/
+    /*public static void main(String[] args) {
+        int c=0,a,temp;
+        int n=153;//This is the number to check armstrong
+        temp=n;
+        while(n>0)
+        {
+            a=n%10;
+            n=n/10;
+            c=c+(a*a*a);
+        }
+        if(temp==c)
+            System.out.println("armstrong number:--> " + temp);
+        else
+            System.out.println("Not armstrong number");
+    }*/
+
+    /****************Merge two sorted array into one sorted array************/
+    /*public static void main(String[] args) {
+        int arr[] = {5,8,9};
+        int arr2[] = {2,4,7};
+        int finalArr[] = new int[arr.length + arr2.length];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while(i < arr.length && j < arr2.length){
+            if(arr[i] < arr2[j]){
+                finalArr[k++] = arr[i++];
+                System.out.println("From if");
+            } else{
+                finalArr[k++] = arr2[j++];
+                System.out.println("From else");
+            }
+        }
+
+        while(i < arr.length)
+            finalArr[k++] = arr[i++];
+
+        while(j < arr.length)
+            finalArr[k++] = arr2[j++];
+
+        System.out.println(Arrays.toString(finalArr));
+    }*/
+
+    /*********Find duplicate string********/
+    /*public static void main(String[] args) {
+        String str = "I am am learning java java";
+        Map<String, Integer> map = new HashMap<>();
+        String []arr = str.split(" ");
+
+        for(int i = 0; i < arr.length; i++){
+            if(!map.containsKey(arr[i])){
+                map.put(arr[i], 1);
+            } else{
+                map.put(arr[i], map.get(arr[i]) + 1);
+            }
+        }
+
+        for(Map.Entry<String,Integer> m: map.entrySet()){
+            if(m.getValue() > 1){
+                System.out.println("Key:--> " + m.getKey() +" and value:--> "+ m.getValue());
+            }
+        }
+    }*/
+
+    /*******Merging ele from 2 arrays alternatively into 3rd array*****/
+    /*public static void main(String[] args) {
+        int arr1[] = {10, 15, 25};
+        int arr2[] = {1, 5, 20, 30};
+        int arr3[] = new int[arr1.length + arr2.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while(i < arr1.length && j < arr2.length){
+            arr3[k++] = arr1[i++];
+            arr3[k++] = arr2[j++];
+        }
+        while(i < arr1.length){
+            arr3[k++] = arr1[i++];
+        }
+        while(j < arr2.length){
+            arr3[k++] = arr2[j++];
+        }
+        System.out.println(Arrays.toString(arr3));
+    }*/
+
 }
