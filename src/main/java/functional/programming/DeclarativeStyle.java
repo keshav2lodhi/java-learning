@@ -21,6 +21,5 @@ public class DeclarativeStyle {
         System.out.println(totalSelector(list, e -> e % 2 == 0));
         System.out.println(totalSelector(list, e -> true));
         System.out.println(totalSelector(list, e -> e % 2 != 0));
-
     }
 }
