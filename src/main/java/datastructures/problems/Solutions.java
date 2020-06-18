@@ -1,4 +1,4 @@
-package data.structures.problems;
+package datastructures.problems;
 
 import java.util.*;
 import java.util.regex.Pattern;
@@ -545,6 +545,78 @@ public class Solutions {
             arr3[k++] = arr2[j++];
         }
         System.out.println(Arrays.toString(arr3));
+    }*/
+
+    /**********Find if one string is rotation of the other string*********/
+    /*public static boolean findRotation(String s1, String s2) {
+        return (s1.length() == s2.length()) && ((s1 + s1).contains(s2));
+    }
+    public static void main(String args[]){
+        String s1 = "ABCD";
+        String s2 = "AACD";
+        boolean res = findRotation(s1, s2);
+        System.out.println("Response: " + res);
+    }*/
+
+    /*******convert ArrayList and Set of String to Array of String*******/
+    /*public static void main(String[] args) {
+        List<String> collection = new ArrayList<>();
+        //Set<String> collection = new HashSet<>();
+        collection.add("Keshav");
+        collection.add("Lodhi");
+
+        System.out.println(collection);
+
+        Object [] obj = collection.stream()
+                .toArray(String[] :: new);
+        System.out.println(Arrays.toString(obj));
+    }*/
+
+    /******************Left rotation of array****************/
+    /*public static void main(String[] args){
+        int arr[] = {6,2,3,4,5};
+        int d = 2;
+        int n = arr.length;
+
+        for(int i = 0; i < d; i++) {
+            int first = arr[0];
+            int j;
+            for(j = 0; j < n - 1; j++){
+                arr[j] = arr[j + 1]; // Shift by one
+            }
+            arr[j] = first;
+        }
+        System.out.println(Arrays.toString(arr));
+    }*/
+
+    /******************Right rotation of array****************/
+    /*public static void main(String[] args){
+
+        int arr[] = {1,2,3,4,5};
+        int d = 2;
+        int n = arr.length;
+
+        for(int i = 0; i < d; i++){
+            int last = arr[n - 1];
+            for(int j = n - 1 ; j > 0; j--){
+                arr[j] = arr[j - 1];
+            }
+            arr[0] = last;
+            System.out.println("Array after each iteration: " + Arrays.toString(arr));
+        }
+        System.out.println(Arrays.toString(arr));
+    }*/
+
+    /*public static boolean sleepIn(boolean weekday, boolean vacation) {
+        if(!weekday || vacation)
+            return true;
+        else
+            return false;
+    }
+    public static void main(String[] args) {
+        System.out.println(sleepIn(false, false));
+        System.out.println(sleepIn(true, false));
+        System.out.println(sleepIn(false, true));
     }*/
 
 }
